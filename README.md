@@ -59,3 +59,9 @@ reg add "HKEY_CLASSES_ROOT\Directory\Background\shell\Notepad\command" /ve /d "C
 ```cmd
 reg add reg add "HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f
 ```
+
+## Bring the Old Context Menu Back
+
+```cmd
+reg add "HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /ve /d "-" /f
+```
