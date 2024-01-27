@@ -1,6 +1,8 @@
 # Perfect-Windows11
  Perfect Windows 11 is a GitHub repository that provides a comprehensive guide to Windows 11. It includes tips and tricks for various aspects of the operating system
 
+ # MAKE SURE TO BACKUP YOUR REGISTRY BEFORE MAKING ANY CHANGES. AFTER A CHANGE A COMPUTER RESTART MIGHT BE REQUIRED
+
 ## Bring Back Windows Photo Viewer
 
 Save the folllwing as a `.reg` file
@@ -71,7 +73,8 @@ reg add "HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c90
 ```cmd
 reg add reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /f
 
+reg add reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /f
 
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" /v NoAutoUpdate /t REG_DWORD /d 1 /f
 ```
 
-Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate
