@@ -53,3 +53,9 @@ Source :: [Britec's Website](https://briteccomputers.co.uk/posts/5-best-registry
 reg add "HKEY_CLASSES_ROOT\Directory\Background\shell\Notepad" /ve /d "Open with Notepad" /f
 reg add "HKEY_CLASSES_ROOT\Directory\Background\shell\Notepad\command" /ve /d "C:\Windows\notepad.exe" /f
 ```
+
+## Disable Bing Search from the Start Menu
+
+```cmd
+reg add reg add "HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f
+```
