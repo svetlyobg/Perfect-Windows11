@@ -46,3 +46,10 @@ Windows Registry Editor Version 5.00
 ```
 
 Source :: [Britec's Website](https://briteccomputers.co.uk/posts/5-best-registry-hacks-for-windows-11-2/)
+
+## Add a Program to the Context Menu
+
+```cmd
+reg add "HKEY_CLASSES_ROOT\Directory\Background\shell\Notepad" /ve /d "Open with Notepad" /f
+reg add "HKEY_CLASSES_ROOT\Directory\Background\shell\Notepad\command" /ve /d "C:\Windows\notepad.exe" /f
+```
